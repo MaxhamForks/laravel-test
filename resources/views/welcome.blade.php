@@ -132,6 +132,11 @@
 
                     <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                        @if(__zhylon_site_build())
+                            <br>
+                            <a href="https://zhylon.de/">Zhylon v{{ request()->server('ZHYLON_VERION', '3') }}</a>
+                            <a href="https://zhylon.de/sites">Site Build {{ __zhylon_site_build('Y-m-d H:i:s') }}</a>
+                        @endif
                     </div>
                 </div>
             </div>
